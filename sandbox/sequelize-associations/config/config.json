@@ -1,0 +1,18 @@
+{
+    "development": {
+      "database": "sequelize_associations_development",
+      "host": "127.0.0.1",
+      "password": "miq",
+      "dialect": "postgres"
+    },
+    "test": {
+      "database": "sequelize_associations_test",
+      "host": "127.0.0.1",
+      "dialect": "postgres"
+    },
+    "production": {
+      "database": "sequelize_associations_production",
+      "host": "127.0.0.1",
+      "dialect": "postgres"
+    }
+  }

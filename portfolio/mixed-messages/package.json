@@ -1,0 +1,16 @@
+{
+  "name": "mixed-messages",
+  "version": "1.0.0",
+  "description": "Codecademy Portfolio \"Mixed Messages\"",
+  "main": "rss.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "author": "miq28",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fast-xml-parser": "^3.21.1",
+    "got": "^11.8.2"
+  }
+}

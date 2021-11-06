@@ -1,0 +1,27 @@
+{
+    "development": {
+        "username": "postgres",
+        "password": "postgres",
+        "database": "wishlist_api_development",
+        "port": 5432,
+        "host": "dbtest.cn50fuyfr3aa.ap-southeast-1.rds.amazonaws.com",
+        "dialect": "postgres"
+    },
+    "test": {
+        "username": "postgres",
+        "password": "postgres",
+        "database": "wishlist_api_test",
+        "port": 5432,
+        "host": "dbtest.cn50fuyfr3aa.ap-southeast-1.rds.amazonaws.com",
+        "dialect": "postgres"
+    },
+    "production": {
+        "use_env_variable": "DATABASE_URL",
+        "dialect": "postgres",
+        "dialectOptions": {
+            "ssl": {
+                "rejectUnauthorized": false
+            }
+        }
+    }
+}
