@@ -7,3 +7,6 @@
 [submodule "ptb1-weekly-assessment"]
 	path = ptb1-weekly-assessment
 	url = https://github.com/agussaputran/ptb1-weekly-assessment.git
+[submodule "OH/00-node-restapi"]
+	path = OH/00-node-restapi
+	url = https://github.com/ribonred/express_example.git
