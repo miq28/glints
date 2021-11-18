@@ -1,0 +1,32 @@
+{
+  "development": {
+    "username": "miq",
+    "password": "miq",
+    "database": "dvdrental_dev",
+    "host": "localhost",
+    "dialect": "postgres",
+    "additional": {
+      "underscored": false,
+      "freezeTableName": false,
+      "charset": "utf8",
+      "dialectOptions": {
+        "collate": "utf8_general_ci"
+      },
+      "timestamps": false
+    }
+  },
+  "test": {
+    "username": "miq",
+    "password": "miq",
+    "database": "dvdrental_test",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "miq",
+    "password": "miq",
+    "database": "dvdrental_prod",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
