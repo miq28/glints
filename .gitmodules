@@ -1,8 +1,5 @@
-[submodule "OH/express_example_1"]
-	path = OH/express_example_1
-	url = https://github.com/ribonred/express_example.git
-[submodule "OH/express_example_2"]
-	path = OH/express_example_2
+[submodule "OH/01-node-express-adminbro-sequelize-unit-testing"]
+	path = OH/01-node-express-adminbro-sequelize-unit-testing
 	url = https://github.com/ribonred/express_example.git
 [submodule "ptb1-weekly-assessment"]
 	path = ptb1-weekly-assessment

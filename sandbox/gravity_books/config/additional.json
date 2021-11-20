@@ -1,0 +1,9 @@
+"additional": {
+    "underscored": false,
+    "freezeTableName": false,
+    "charset": "utf8",
+    "dialectOptions": {
+      "collate": "utf8_general_ci"
+    },
+    "timestamps": false
+  }

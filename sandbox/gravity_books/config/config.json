@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "miq",
+    "password": "miq",
+    "database": "gravity_books",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "miq",
+    "password": "miq",
+    "database": "dvdrental_test",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "miq",
+    "password": "miq",
+    "database": "dvdrental_prod",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
