@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "miq",
-    "password": "miq",
+    "username": "postgres",
+    "password": "postgres",
     "database": "gravity_books",
-    "host": "localhost",
+    "host": "dbtest.cn50fuyfr3aa.ap-southeast-1.rds.amazonaws.com",
     "dialect": "postgres"
   },
   "test": {

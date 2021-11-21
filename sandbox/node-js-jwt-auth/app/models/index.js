@@ -17,8 +17,6 @@ const sequelize = new Sequelize(
       },
       timestamps: false
     },
-    
-    operatorsAliases: false,
 
     pool: {
       max: config.pool.max,
