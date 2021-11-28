@@ -3,7 +3,7 @@ const Province = db.provinces;
 const Op = db.Sequelize.Op;
 const { isEmptyObject } = require("../utils")
 
-// Create and Save a new Tutorial
+// Create a province
 exports.create = async (req, res) => {
   // Validate request
   if (isEmptyObject(req.query)) {
@@ -20,18 +20,6 @@ exports.create = async (req, res) => {
     // published: req.body.published ? req.body.published : false
   };
 
-  // Save Tutorial in the database
-  // Province.create(province)
-  //   .then(data => {
-  //     res.send(data);
-  //   })
-  //   .catch(err => {
-  //     res.status(500).send({
-  //       message:
-  //         err.message || "Some error occurred while creating the Tutorial."
-  //     });
-  //   });
-
   try {
     const data = await Province.create(province)
     res.send(data);
@@ -44,11 +32,8 @@ exports.create = async (req, res) => {
   }
 };
 
-// Retrieve all Tutorials from the database.
+// Retrieve all provinces
 exports.findAll = async (req, res) => {
-
-  // const name = req.query.name
-  // var condition = name ? { name: { [Op.iLike]: `%${name}%` } } : null;
 
   var condition;
   if (isEmptyObject(req.query)) {
@@ -76,7 +61,7 @@ exports.findAll = async (req, res) => {
 
 };
 
-// Find a single Tutorial with an id
+// Find a province
 exports.findOne = async (req, res) => {
   const id = req.params.id;
   var condition = id ? { id: id } : null;
@@ -90,24 +75,4 @@ exports.findOne = async (req, res) => {
         err.message || "Some error occurred while retrieving provinces."
     });
   }
-};
-
-// Update a Tutorial by the id in the request
-exports.update = (req, res) => {
-
-};
-
-// Delete a Tutorial with the specified id in the request
-exports.delete = (req, res) => {
-
-};
-
-// Delete all Tutorials from the database.
-exports.deleteAll = (req, res) => {
-
-};
-
-// Find all published Tutorials
-exports.findAllPublished = (req, res) => {
-
 };

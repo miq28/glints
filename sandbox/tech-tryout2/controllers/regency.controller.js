@@ -1,9 +1,9 @@
 const db = require("../models");
-const Regency= db.regencies;
+const Regency = db.regencies;
 const Op = db.Sequelize.Op;
 const { isEmptyObject } = require("../utils")
 
-// Create and Save a new Tutorial
+// Create and Save a regency
 exports.create = async (req, res) => {
   // Validate request
   if (isEmptyObject(req.query)) {
@@ -13,24 +13,10 @@ exports.create = async (req, res) => {
     return;
   }
 
-  // Create a Province
+  // Create a regency
   const province = {
     name: req.query.name,
-    // description: req.body.description,
-    // published: req.body.published ? req.body.published : false
   };
-
-  // Save Tutorial in the database
-  // Province.create(province)
-  //   .then(data => {
-  //     res.send(data);
-  //   })
-  //   .catch(err => {
-  //     res.status(500).send({
-  //       message:
-  //         err.message || "Some error occurred while creating the Tutorial."
-  //     });
-  //   });
 
   try {
     const data = await Regency.create(province)
@@ -44,11 +30,8 @@ exports.create = async (req, res) => {
   }
 };
 
-// Retrieve all Tutorials from the database.
+// Retrieve all regency
 exports.findAll = async (req, res) => {
-
-  // const name = req.query.name
-  // var condition = name ? { name: { [Op.iLike]: `%${name}%` } } : null;
 
   var condition;
   if (isEmptyObject(req.query)) {
@@ -70,13 +53,13 @@ exports.findAll = async (req, res) => {
   } catch (err) {
     res.status(400).send({
       message:
-        err.message || "Some error occurred while retrieving provinces."
+        err.message
     });
   }
 
 };
 
-// Find a single Tutorial with an id
+// Find a regency with an id
 exports.findOne = async (req, res) => {
   const id = req.params.id;
   var condition = id ? { id: id } : null;
@@ -87,27 +70,7 @@ exports.findOne = async (req, res) => {
   } catch (err) {
     res.status(400).send({
       message:
-        err.message || "Some error occurred while retrieving provinces."
+        err.message
     });
   }
-};
-
-// Update a Tutorial by the id in the request
-exports.update = (req, res) => {
-
-};
-
-// Delete a Tutorial with the specified id in the request
-exports.delete = (req, res) => {
-
-};
-
-// Delete all Tutorials from the database.
-exports.deleteAll = (req, res) => {
-
-};
-
-// Find all published Tutorials
-exports.findAllPublished = (req, res) => {
-
 };

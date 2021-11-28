@@ -25,6 +25,8 @@ db.sequelize = sequelize;
 db.provinces = require("./province.model.js")(sequelize, Sequelize);
 db.regencies = require("./regency.model.js")(sequelize, Sequelize);
 db.districts = require("./district.model.js")(sequelize, Sequelize);
+db.offices = require("./office.model.js")(sequelize, Sequelize);
+db.users = require("./user.model.js")(sequelize, Sequelize);
 
 // A.hasOne(B, { /* options */ });
 // A.belongsTo(B, { /* options */ });
@@ -34,7 +36,7 @@ db.districts = require("./district.model.js")(sequelize, Sequelize);
 db.regencies.hasMany(db.districts, {foreignKey: 'regency_id', onDelete: 'CASCADE'});
 db.districts.belongsTo(db.regencies, {foreignKey: 'regency_id'})
 
-// db.provinces.hasMany(db.regencies, {foreignKey: 'province_id'});
-// db.regencies.belongsTo(db.provinces, {foreignKey: 'province_id'})
+db.provinces.hasMany(db.regencies, {foreignKey: 'province_id', onDelete: 'CASCADE'});
+db.regencies.belongsTo(db.provinces, {foreignKey: 'province_id'})
 
 module.exports = db;
